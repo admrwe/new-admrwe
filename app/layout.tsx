@@ -1,8 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bagel_Fat_One, Chango, Xanh_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const bagel = Bagel_Fat_One({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-bagel",
+});
+
+const chango = Chango({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-chango",
+});
+
+const xanh = Xanh_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-xanh",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${bagel.variable} ${chango.variable} ${xanh.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

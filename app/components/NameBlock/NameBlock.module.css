@@ -1,0 +1,100 @@
+.name-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.name-block__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding-block: var(--space-2);
+  padding-inline: var(--space-2);
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.name-block__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-1);
+  font-family: var(--font-xanh);
+  font-weight: bold;
+  color: #cfcfcf;
+  filter: drop-shadow(2px 2px 0px black);
+  font-size: 1.5rem;
+  line-height: 1.5;
+
+  .name {
+    font-style: italic;
+    font-size: 2rem;
+  }
+
+  & a {
+    border-bottom: 1px solid #cfcfcf;
+  }
+}
+
+.name-block__filter {
+  position: absolute;
+  background-color: #8d9791;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.name-block__letters {
+  display: grid;
+  block-size: 100vh;
+  inline-size: 100vw;
+  transform: scale(1.25) skewX(5deg);
+  filter: blur(20px) contrast(20);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.name-block__letter-container {
+  font-family: var(--font-xanh);
+  font-style: italic;
+  background-color: var(--letter-bg);
+  color: var(--letter-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+
+  & .name-block__letter {
+    font-size: clamp(40rem, 60vw, 100rem);
+    animation: spin infinite linear;
+  }
+
+  &.color1 {
+    --letter-bg: rgb(107, 9, 157);
+    --letter-color: rgb(255, 0, 0);
+  }
+
+  &.color2 {
+    --letter-bg: white;
+    --letter-color: white;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
