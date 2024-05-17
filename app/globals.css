@@ -1,6 +1,6 @@
 :root {
-  --blue: #0000aa;
-  --red: #990000;
+  --blue: #000087;
+  --red: #e30000;
   --background: var(--blue);
 
   --space-base: 8px;
@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: blue;
+    --background: var(--blue);
   }
 }
 

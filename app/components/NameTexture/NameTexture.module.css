@@ -1,62 +1,32 @@
 .name-block {
-  position: relative;
+  position: fixed;
   overflow: hidden;
-}
-
-.name-block__info-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  padding-block: var(--space-2);
-  padding-inline: var(--space-2);
-  z-index: 2;
+  animation: fadein 1s ease-in-out;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-.name-block__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: var(--space-1);
-  font-family: var(--font-xanh);
-  font-weight: bold;
-  color: #cfcfcf;
-  filter: drop-shadow(2px 2px 0px black);
-  font-size: 1.5rem;
-  line-height: 1.5;
-
-  .name {
-    font-style: italic;
-    font-size: 2rem;
-  }
-
-  & a {
-    border-bottom: 1px solid #cfcfcf;
-  }
+  isolation: isolate;
 }
 
 .name-block__filter {
   position: absolute;
-  background-color: #8d9791;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  mix-blend-mode: multiply;
+  background-color: #db7e7e;
+  mix-blend-mode: darken;
   z-index: 1;
 }
 
 .name-block__letters {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: grid;
-  block-size: 100vh;
-  inline-size: 100vw;
   transform: scale(1.25) skewX(5deg);
   filter: blur(20px) contrast(20);
   grid-template-columns: repeat(4, 1fr);
@@ -73,6 +43,7 @@
   justify-content: center;
   overflow: hidden;
   user-select: none;
+  z-index: 0;
 
   & .name-block__letter {
     font-size: clamp(40rem, 60vw, 100rem);
@@ -85,8 +56,8 @@
   }
 
   &.color2 {
-    --letter-bg: white;
-    --letter-color: white;
+    --letter-bg: rgb(107, 9, 157);
+    --letter-color: rgb(107, 9, 157);
   }
 }
 
@@ -96,5 +67,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

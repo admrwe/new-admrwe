@@ -1,3 +1,78 @@
 .main {
+  position: relative;
+  inline-size: 100vw;
+  block-size: 100vh;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+    "top"
+    "bottom";
+  padding-block: var(--space-2);
+  padding-inline: var(--space-2);
+  font-family: var(--font-xanh);
+  font-weight: bold;
+  color: #e1e1e1;
+  /* drop-shadow(2px -5px 1.75px black)  */
+  filter: blur(0.65px) contrast(3);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: center;
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  & a {
+    border-bottom: 1px solid white;
+  }
+
+  .cloud {
+    font-size: 6rem;
+    transform: scaleX(2);
+    line-height: 0.75;
+    animation: cloud 20s infinite linear;
+  }
+}
+
+.top {
+  grid-area: top;
+  justify-self: center;
+  align-self: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scaleY(1.5);
+}
+
+.bottom {
+  grid-area: bottom;
+  justify-self: center;
+  align-self: center;
+  transform: scaleY(1.5);
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(-100%) scaleX(1.5);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) scaleX(2);
+    opacity: 0;
+  }
 }
