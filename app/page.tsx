@@ -11,7 +11,7 @@ export default function Home() {
         </div>
         <div className={styles.bottom}>
           <a href="https://www.linkedin.com/in/admrwe/">
-            Design system engineer
+            Design system developer
           </a>
           , designer, <a href="https://soundcloud.com/admrwe">musician</a>
         </div>

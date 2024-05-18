@@ -16,7 +16,7 @@
   right: 0;
   bottom: 0;
   background-color: #db7e7e;
-  mix-blend-mode: darken;
+  mix-blend-mode: multiply;
   z-index: 1;
 }
 
