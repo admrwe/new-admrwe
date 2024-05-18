@@ -29,7 +29,7 @@ const Letter = (props: LetterProps) => {
 
   /**
    * Generates negative to positive range, i.e. -15 to 15
-   * getRandomPosNeg(15)
+   * getRandomIntPosNeg(15)
    */
   const getRandomIntPosNeg = (range: number) =>
     Math.floor((randomNum * 2 - 1) * range);
@@ -43,7 +43,7 @@ const Letter = (props: LetterProps) => {
   });
 
   const getRandomAnimationDuration = () => ({
-    animationDuration: `${getRandomIntRange(40, 60)}s`,
+    animationDuration: `${getRandomIntRange(100, 140)}s`,
   });
 
   const getRandomColorClass = () => {
