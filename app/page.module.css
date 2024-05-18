@@ -1,7 +1,9 @@
 .main {
-  position: relative;
-  inline-size: 100vw;
-  block-size: 100vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .info {
@@ -21,18 +23,28 @@
   font-family: var(--font-xanh);
   font-weight: bold;
   color: #e1e1e1;
-  /* drop-shadow(2px -5px 1.75px black)  */
-  filter: blur(0.65px) contrast(3);
+  filter: blur(0.25px) contrast(3);
   font-size: 1.25rem;
   line-height: 1.5;
   text-align: center;
 
   .name {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 
   & a {
-    border-bottom: 1px solid white;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      text-underline-offset: 6px;
+    }
+
+    &:focus-visible {
+      outline-offset: 4px;
+    }
   }
 
   .cloud {
