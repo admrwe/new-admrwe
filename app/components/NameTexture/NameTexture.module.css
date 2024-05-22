@@ -15,8 +15,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #db7e7e;
-  mix-blend-mode: multiply;
+  /* background-color: #db7e7e;
+  mix-blend-mode: multiply; */
   z-index: 1;
 }
 
@@ -28,7 +28,7 @@
   bottom: 0;
   display: grid;
   transform: scale(1.25) skewX(5deg);
-  filter: blur(20px) contrast(20);
+  /* filter: blur(20px) contrast(20); */
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
@@ -46,18 +46,18 @@
   z-index: 0;
 
   & .name-block__letter {
-    font-size: clamp(40rem, 60vw, 100rem);
-    animation: spin infinite linear;
+    font-size: clamp(60rem, 60vw, 120rem);
+    /* animation: spin infinite linear; */
   }
 
   &.color1 {
-    --letter-bg: rgb(107, 9, 157);
-    --letter-color: rgb(255, 0, 0);
+    --letter-bg: var(--blue);
+    --letter-color: var(--red);
   }
 
   &.color2 {
-    --letter-bg: rgb(107, 9, 157);
-    --letter-color: rgb(107, 9, 157);
+    --letter-bg: var(--blue);
+    --letter-color: var(--blue);
   }
 }
 

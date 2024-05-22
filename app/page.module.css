@@ -23,7 +23,7 @@
   font-family: var(--font-xanh);
   font-weight: bold;
   color: #e1e1e1;
-  filter: blur(0.25px) contrast(3);
+  /* filter: blur(0.25px) contrast(3); */
   font-size: 1.25rem;
   line-height: 1.5;
   text-align: center;
