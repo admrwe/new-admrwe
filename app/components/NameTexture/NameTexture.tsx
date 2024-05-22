@@ -54,10 +54,10 @@ const Letter = (props: LetterProps) => {
   return (
     <div
       className={`${
-        styles["name-block__letter-container"]
+        styles["name-texture__letter-container"]
       } ${getRandomColorClass()}`}>
       <div
-        className={styles["name-block__letter"]}
+        className={styles["name-texture__letter"]}
         style={getRandomAnimationDuration()}>
         <div style={getRandomLetterStyle()}>{letter}</div>
       </div>
@@ -69,9 +69,9 @@ export const NameTexture = () => {
   const name = "ADAMROWE";
 
   return (
-    <div className={styles["name-block"]}>
-      <div className={styles["name-block__filter"]}></div>
-      <div className={styles["name-block__letters"]}>
+    <div className={styles["name-texture"]}>
+      {/* <div className={styles["name-texture__filter"]}></div> */}
+      <div className={styles["name-texture__letters"]}>
         {name.split("").map((letter, i) => (
           <Letter key={`${letter}-${i}`} letter={letter} />
         ))}

@@ -1,4 +1,4 @@
-.name-block {
+.name-texture {
   position: fixed;
   overflow: hidden;
   animation: fadein 1s ease-in-out;
@@ -9,18 +9,18 @@
   isolation: isolate;
 }
 
-.name-block__filter {
+/* .name-texture__filter {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-color: #db7e7e;
-  mix-blend-mode: multiply; */
+  background-color: #db7e7e;
+  mix-blend-mode: multiply;
   z-index: 1;
-}
+} */
 
-.name-block__letters {
+.name-texture__letters {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
-.name-block__letter-container {
+.name-texture__letter-container {
   font-family: var(--font-xanh);
   font-style: italic;
   background-color: var(--letter-bg);
@@ -45,7 +45,7 @@
   user-select: none;
   z-index: 0;
 
-  & .name-block__letter {
+  & .name-texture__letter {
     font-size: clamp(60rem, 60vw, 120rem);
     /* animation: spin infinite linear; */
   }
